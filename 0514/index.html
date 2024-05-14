@@ -8,9 +8,10 @@
 </head>
 
 <body>
-	<!-- 觸發互動視窗的按鈕 -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
-  data-bs-target="#myModal">商品資訊</button>
+	
+<h1>互動視窗 (Modal)</h1>
+<!-- 觸發互動視窗的按鈕 -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">商品資訊</button>
 <!-- 互動視窗 -->
 <div class="modal fade" id="myModal" tabindex="-1">
 	<div class="modal-dialog">
@@ -31,6 +32,7 @@
 </div>
 <hr>
 
+<h1>工具提示 (Tooltips)</h1>
 <div class="container text-center">  
 	<img src="flowers3.jpg" width="70%" class="img-fluid"><br>
 	<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" 
@@ -50,17 +52,19 @@
   });
 </script>
 <hr>
-	
-<div class="container text-center">
-  <img src="flowers3.jpg" width="50%" class="img-fluid"><br>
-  <button type="button" class="btn btn-secondary" data-bs-container="body" 
-    data-bs-toggle="popover" data-bs-placement="top" data-bs-content="太陽花">
-    在上方顯示彈出提示</button>
 
-  <button type="button" class="btn btn-secondary" title="圖片標題" 
-    data-bs-toggle="popover" data-bs-placement="right" data-bs-content="太陽花">
-    在右側顯示彈出提示</button>
+<h1>彈出提示 (Popovers)</h1>
+<div class="container text-center">
+	<img src="flowers3.jpg" width="50%" class="img-fluid"><br>
+	<button type="button" class="btn btn-secondary" data-bs-container="body" 
+		data-bs-toggle="popover" data-bs-placement="top" data-bs-content="太陽花">
+		在上方顯示彈出提示</button>
+
+	<button type="button" class="btn btn-secondary" title="圖片標題" 
+		data-bs-toggle="popover" data-bs-placement="right" data-bs-content="太陽花">
+		在右側顯示彈出提示</button>
 </div>
+	
 <script>
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -69,16 +73,17 @@
 </script>
 <hr>
 	
+<h1>卡片 (Card)</h1>
 <div class="card text-center" style="width: 400px;">
-  <div class="card-header">詩句欣賞</div>
-  <div class="card-body">
-    <h5 class="card-title">陶淵明－飲酒其五</h5>
-    <p class="card-text">結廬在人境，而無車馬喧。…。</p>
-    <a href="#" class="btn btn-primary">註釋與賞析</a>
-  </div>
-  <div class="card-footer text-muted">2021年</div>
+	<div class="card-header">詩句欣賞</div>
+		<div class="card-body">
+		<h5 class="card-title">陶淵明－飲酒其五</h5>
+		<p class="card-text">結廬在人境，而無車馬喧。…。</p>
+		<a href="#" class="btn btn-primary">註釋與賞析</a>
+		</div>
+	<div class="card-footer text-muted">2021年</div>
 </div>
-
+<hr>
 
 </body>
 </html>
