@@ -1,2 +1,10 @@
 @charset "utf-8";
 
+nav {
+    background-color: #B889DE;
+    font-family: "華康中特圓體", "微軟正黑體", "標楷體", "新細明體";
+    color: #F5C0E0;
+}
+body {
+    background-color: #FFE9F5;
+}
