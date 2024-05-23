@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.mainIndex-navbar-toggler {
+    border: 2px solid #4CAF50; /* 綠色邊框 */
+    border-radius: 8px; /* 圓角邊框 */
+    width: 50px; /* 設置寬度 */
+    height: 50px; /* 設置高度 */
+}
+
+.mainIndex-navbar-toggler .fa-solid,
+.navbar-toggler-icon {
+    font-size: 1.25rem; /* 調整圖標大小 */
+}
+
+/* 調整聚焦狀態下的虛線樣式 */
+.mainIndex-navbar-toggler:focus {
+    outline: 2px dashed red; /* 2像素紅色虛線 */
+    outline-offset: 2px; /* 與按鈕邊緣的距離 */
+}
+
+
