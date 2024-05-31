@@ -1,10 +1,43 @@
 @charset "utf-8";
 
-nav {
-    background-color: #B889DE;
-    font-family: "華康中特圓體", "微軟正黑體", "標楷體", "新細明體";
-    color: #F5C0E0;
-}
 body {
     background-color: #FFE9F5;
+}
+
+/* 设置页面和视频的样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+  /* 导航栏样式 */
+.navbar {
+    width: 100%;
+    background-color: #B889DE;
+	font-family: "華康中特圓體", "微軟正黑體", "標楷體", "新細明體";
+    color: #F5C0E0;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* 视频容器样式 */
+.video-container {
+    position: absolute;
+    top: 50px; /* 根据导航栏的高度进行调整 */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px); /* 100% 减去导航栏的高度 */
+    overflow: hidden;
+	pointer-events: none; 
+}
+/* 视频样式 */
+#fullscreen-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持视频内容比例 */
 }

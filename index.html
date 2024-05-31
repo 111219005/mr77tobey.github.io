@@ -9,7 +9,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/3e63dd965f.js" crossorigin="anonymous"></script>
 		<script src="Scripts/swfobject_modified.js"></script>
-<link href="mainIndex.css" rel="stylesheet">
+		<link href="mainIndex.css" rel="stylesheet">
+		
 	</head>
 	
 	<body>
@@ -61,11 +62,34 @@
 	</nav>
 		
 	<!-- video -->
-	<video width="640" height="360" controls autoplay>
-    <source src="video.mp4" type="video/mp4">
-    您的浏览器不支持 HTML5 影片标签。
-	</video>	
 	
+	<video id="fullscreen-video" autoplay loop muted>
+    <source src="video.mp4" type="video/mp4">
+    您的瀏覽器不支持 HTML5 影片。
+	</video>
+	
+	 <script>
+        const video = document.getElementById('fullscreen-video');
+
+        video.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) { // Firefox
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE/Edge
+                video.msRequestFullscreen();
+            }
+        });
+		document.getElementById('fullscreen-video').muted = true;
+		document.addEventListener("DOMContentLoaded", function() {
+    	var video = document.getElementById('fullscreen-video');
+    	video.onclick = function(event) {
+        event.preventDefault();
+    	};
+		});
+    </script>
 		
 		
 		
