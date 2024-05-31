@@ -1,21 +1,21 @@
 @charset "utf-8";
 
-body {
-    background-color: #FFE9F5;
-	overflow-y: auto; /* 允许垂直滚动 */
-    height: 100%; /* 让 body 占满整个视窗 */
-    margin: 0; /* 去除默认的页面边距 */
-    padding: 0; /* 去除默认的页面内边距 */
+html {
+    overflow: hidden;
+    height: 100%;
 }
 
-/* 設定頁面和影片的樣式 */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+body {
+	position: absolute;
+    background-color: #FFE9F5;
+	overflow-y: auto;  /*允许垂直滚动 */
+    height: 100%;  /*让 body 占满整个视窗 */
+    margin: 0; /* 去除默认的页面边距 */
+    padding: 0; /* 去除默认的页面内边距 */
+	width: 100%;
     overflow: scroll;
 }
+
   /* navber樣式 */
 .navbar {
     width: 100%;
@@ -24,24 +24,26 @@ body, html {
     color: #F5C0E0;
     padding: 10px 0;
     text-align: center;
-    position: fixed;
+    position: relative;
     top: 0;
+	padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
+    /* 这里的值应该根据导航栏的高度来调整 */
     left: 0;
     z-index: 1000;
 }
 /* 影片容器樣式 */
 .video-container {
-    position: absolute;
-    top: 50px; /* 根據nav的高度進行調整 */
+    position: relative;
+    top: 10px; /* 根據nav的高度進行調整 */
     left: 0;
     width: 100%;
-    height: calc(100% - 50px); /* 100% 減去nav的高度 */
+    height: calc(100% - 10px); /* 100% 減去nav的高度 */
     overflow: hidden;
 	pointer-events: none; 
 }
 /* 影片樣式 */
 #fullscreen-video {
-   position: fixed;
+   position: absolute;
    top: 50px; /* 你想要影片停留的位置 */
    left: 0px;
    width: 100%; /* 影片宽度占满容器 */

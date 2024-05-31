@@ -95,6 +95,22 @@
 		var newTop = scrollTop + 50; // 50 是你希望影片停留的位置
 		video.style.top = newTop + 'px';
 		});
+		  // 使用 JavaScript 监听页面滚动事件
+    	window.addEventListener('scroll', function() {
+		var navbar = document.querySelector('.navbar');
+		var content = document.querySelector('.content');
+		var scrollPosition = window.scrollY;
+
+		if (scrollPosition > navbar.offsetHeight) {
+			// 如果滚动位置超过了导航栏的高度，则将导航栏切换为固定定位
+			navbar.style.position = 'fixed';
+			content.style.paddingTop = navbar.offsetHeight + 'px'; // 调整内容的顶部内边距
+		} else {
+			// 否则保持相对定位
+			navbar.style.position = 'relative';
+			content.style.paddingTop = '0'; // 重置内容的顶部内边距
+		}
+    });
     </script>
 		
 		
