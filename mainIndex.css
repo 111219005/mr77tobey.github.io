@@ -45,7 +45,7 @@ body, html {
    top: 50px; /* 你想要影片停留的位置 */
    left: 0px;
    width: 100%; /* 影片宽度占满容器 */
-   height: auto; /* 根据视频比例自适应高度 */
+   height: 100%; /* 根据视频比例自适应高度 */
    object-fit: cover; /* 保持视频内容比例 */
    z-index: -1;  /*確保影片位於其他内容之下 */
 }
