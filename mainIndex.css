@@ -2,17 +2,18 @@
 
 body {
     background-color: #FFE9F5;
+	 height: 2000px; /* 用於測試滾動效果 */
 }
 
-/* 设置页面和视频的样式 */
+/* 設定頁面和影片的樣式 */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
 }
-  /* 导航栏样式 */
+  /* navber樣式 */
 .navbar {
     width: 100%;
     background-color: #B889DE;
@@ -25,19 +26,23 @@ body, html {
     left: 0;
     z-index: 1000;
 }
-/* 视频容器样式 */
+/* 影片容器樣式 */
 .video-container {
     position: absolute;
-    top: 50px; /* 根据导航栏的高度进行调整 */
+    top: 50px; /* 根據nav的高度進行調整 */
     left: 0;
     width: 100%;
-    height: calc(100% - 50px); /* 100% 减去导航栏的高度 */
+    height: calc(100% - 50px); /* 100% 減去nav的高度 */
     overflow: hidden;
 	pointer-events: none; 
 }
-/* 视频样式 */
+/* 影片樣式 */
 #fullscreen-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 保持视频内容比例 */
+   position: fixed;
+   top: 50px; /* 你想要影片停留的位置 */
+   left: 50px;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* 保持视频内容比例 */
+   z-index: 9999; /* 確保影片位於其他内容之上 */
 }
