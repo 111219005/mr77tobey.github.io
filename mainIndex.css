@@ -65,6 +65,7 @@ body {
     outline: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
     box-shadow: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
 	cursor: pointer; /* 设置鼠标指针为手型 */
+	text-decoration: none;
 }
 .content {
     padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
