@@ -7,9 +7,10 @@
 		<title>112-2網站設計與賞析作業</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/3e63dd965f.js" crossorigin="anonymous"></script>
 		<script src="Scripts/swfobject_modified.js"></script>
 		<link href="mainIndex.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/3e63dd965f.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 		
 	</head>
 	
@@ -67,6 +68,11 @@
     <source src="video.mp4" type="video/mp4">
     您的瀏覽器不支持 HTML5 影片。
 	</video>
+	
+	<button id="scrollToTopBtn" type="button" aria-label="Scroll to Top">
+	<i class="fa-solid fa-circle-arrow-down" style="color: #B197FC;"></i>	
+	</button>
+	
 	</div>
 	<script>
         const video = document.getElementById('fullscreen-video');
@@ -113,7 +119,19 @@
     	});
     </script>
 		
-		
+	<script>
+	// 找到按钮元素
+	const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+	// 添加点击事件监听器
+	scrollToTopBtn.addEventListener('click', function() {
+    // 使用 window.scrollTo() 方法将页面滑动到顶部
+    window.scrollTo({
+        top: 0, // 滚动到页面顶部
+        behavior: 'smooth' // 平滑滚动
+    });
+	});
+	</script>	
 		
 
 	<!-- 輪播器 -->
