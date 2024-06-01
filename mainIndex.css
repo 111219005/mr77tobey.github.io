@@ -52,8 +52,6 @@ body {
 	pointer-events: none; 
 }
 #scrollToTopBtn {
-	width: 50px; /* 設置按鈕寬度 */
-    height: 50px; /* 設置按鈕高度 */
 	font-size: 24px; /* 设置按钮的字体大小 */
 	padding: 10px 20px; /* 上下各增加 10px 的內邊距，左右各增加 20px 的內邊距 */
     position: absolute;
