@@ -79,18 +79,19 @@
 	</div>
 		
 	<script>
-	// 找到按钮元素
-	const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+	document.addEventListener('DOMContentLoaded', (event) => {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-	// 添加点击事件监听器
-	console.log('Button clicked'); // 检查点击事件是否被正确触发
-	scrollToTopBtn.addEventListener('click', function() {
-    // 使用 window.scrollTo() 方法将页面滑动到顶部
-    window.scrollTo({
-        top: 0, // 滚动到页面顶部
-        behavior: 'smooth' // 平滑滚动
+    // 檢查按鈕是否正確綁定事件
+    scrollToTopBtn.addEventListener('click', function() {
+        console.log('Button clicked'); // 檢查點擊事件是否被正確觸發
+        // 使用 window.scrollTo() 方法將頁面滑動到頂部
+        window.scrollTo({
+            top: 0, // 滾動到頁面頂部
+            behavior: 'smooth' // 平滑滾動
+        });
     });
-	});
+});
 	</script>	
 		
 	<script>

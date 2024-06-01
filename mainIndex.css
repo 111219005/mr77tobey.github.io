@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
 html {
-    overflow: hidden;
+    /*overflow: hidden;*/
     height: 100%;
 }
 
@@ -34,7 +34,7 @@ body {
 /* 影片容器樣式 */
 .video-container {
     position: relative;
-    top: 10px; /* 根據nav的高度進行調整 */
+    top: 0px; /* 根據nav的高度進行調整 */
     left: 0;
     width: 100%;
     height: calc(100% - 10px); /* 100% 減去nav的高度 */
@@ -43,7 +43,7 @@ body {
 /* 影片樣式 */
 #fullscreen-video {
 	position: absolute;
-	top: 50px; /* 你想要影片停留的位置 */
+	top: 20px; /* 你想要影片停留的位置 */
 	left: 0px;
 	width: 100%; /* 影片宽度占满容器 */
 	height: 100%; /* 根据视频比例自适应高度 */
