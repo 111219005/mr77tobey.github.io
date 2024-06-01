@@ -34,7 +34,7 @@ body {
 /* 影片容器樣式 */
 .video-container {
     position: relative;
-    top: 50px; /* 根據nav的高度進行調整 */
+    top: 10px; /* 根據nav的高度進行調整 */
     left: 0;
     width: 100%;
     height: calc(100% - 10px); /* 100% 減去nav的高度 */
@@ -51,9 +51,7 @@ body {
    object-fit: cover; /* 保持视频内容比例 */
    z-index: -1;  /*確保影片位於其他内容之下 */
 }
-
-/*
 .content {
-    padding-top: calc(100vh - 50px); /* 为内容添加与导航栏高度相等的顶部内边距 */
-   /* margin-top: 50px; /* 使内容在视频下方显示，值应与视频容器高度相同 */
- /* }
+    padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
+    margin-top: calc(100vh - 50px); /* 使内容在视频下方显示，值应与视频容器高度相同 */
+  }
