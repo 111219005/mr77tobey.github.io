@@ -39,7 +39,7 @@ body {
     width: 100%;
     height: calc(100% - 10px); /* 100% 減去nav的高度 */
     overflow: hidden;
-	pointer-events: none; 
+	
 }
 /* 影片樣式 */
 #fullscreen-video {
@@ -50,6 +50,7 @@ body {
    height: 100%; /* 根据视频比例自适应高度 */
    object-fit: cover; /* 保持视频内容比例 */
    z-index: -1;  /*確保影片位於其他内容之下 */
+	pointer-events: none; 
 }
 #scrollToTopBtn {
 	font-size: 24px; /* 设置按钮的字体大小 */
@@ -63,6 +64,7 @@ body {
     border: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
     outline: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
     box-shadow: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
+	cursor: pointer; /* 设置鼠标指针为手型 */
 }
 .content {
     padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
