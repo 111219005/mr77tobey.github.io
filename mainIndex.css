@@ -53,7 +53,6 @@ body {
 }
 #scrollToTopBtn {
 	font-size: 24px; /* 设置按钮的字体大小 */
-	padding: 10px 20px; /* 上下各增加 10px 的內邊距，左右各增加 20px 的內邊距 */
     position: absolute;
     bottom: 5px; /* 调整按钮距离影片底部的距离 */
     left: 50%; /* 将按钮水平居中 */
