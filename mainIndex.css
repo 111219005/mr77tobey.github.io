@@ -39,21 +39,23 @@ body {
     width: 100%;
     height: calc(100% - 10px); /* 100% 減去nav的高度 */
     overflow: hidden;
-	
 }
 /* 影片樣式 */
 #fullscreen-video {
-   position: absolute;
-   top: 50px; /* 你想要影片停留的位置 */
-   left: 0px;
-   width: 100%; /* 影片宽度占满容器 */
-   height: 100%; /* 根据视频比例自适应高度 */
-   object-fit: cover; /* 保持视频内容比例 */
-   z-index: -1;  /*確保影片位於其他内容之下 */
+	position: absolute;
+	top: 50px; /* 你想要影片停留的位置 */
+	left: 0px;
+	width: 100%; /* 影片宽度占满容器 */
+	height: 100%; /* 根据视频比例自适应高度 */
+	object-fit: cover; /* 保持视频内容比例 */
+	z-index: -1;  /*確保影片位於其他内容之下 */
 	pointer-events: none; 
 }
 #scrollToTopBtn {
+	width: 50px; /* 設置按鈕寬度 */
+    height: 50px; /* 設置按鈕高度 */
 	font-size: 24px; /* 设置按钮的字体大小 */
+	padding: 10px 20px; /* 上下各增加 10px 的內邊距，左右各增加 20px 的內邊距 */
     position: absolute;
     bottom: 5px; /* 调整按钮距离影片底部的距离 */
     left: 50%; /* 将按钮水平居中 */
@@ -65,7 +67,7 @@ body {
     outline: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
     box-shadow: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
 	cursor: pointer; /* 设置鼠标指针为手型 */
-	text-decoration: none;
+	text-decoration: none !important;
 }
 .content {
     padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
