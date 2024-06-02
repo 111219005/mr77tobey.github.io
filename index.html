@@ -79,19 +79,17 @@
 	</div>
 		
 	<script>
-	document.addEventListener('DOMContentLoaded', (event) => {
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-    // 檢查按鈕是否正確綁定事件
-    scrollToTopBtn.addEventListener('click', function() {
-        console.log('Button clicked'); // 檢查點擊事件是否被正確觸發
-        // 使用 window.scrollTo() 方法將頁面滑動到頂部
-        window.scrollTo({
-            top: 0, // 滾動到頁面頂部
-            behavior: 'smooth' // 平滑滾動
+	document.addEventListener('DOMContentLoaded', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            scrollToTopBtn.addEventListener('click', function() {
+                const videoContainer = document.querySelector('.video-container');
+                const targetPosition = videoContainer.offsetHeight + videoContainer.offsetTop;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
         });
-    });
-});
 	</script>	
 		
 	<script>

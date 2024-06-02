@@ -3,14 +3,12 @@
 html {
     /*overflow: hidden;*/
     height: 100%;
-	overflow-x: hidden;
 }
 
 body {
 	position: absolute;
     background-color: #FFE9F5;
 	overflow-y: auto;  /*允许垂直滚动 */
-	overflow-x: hidden;
     height: 100%;  /*让 body 占满整个视窗 */
     margin: 0; /* 去除默认的页面边距 */
     padding: 0; /* 去除默认的页面内边距 */
@@ -21,7 +19,6 @@ body {
   /* navber樣式 */
 .navbar {
     width: 100%;
-	height: 10px; /* 设置导航栏的高度 */
     background-color: #B889DE;
 	font-family: "華康中特圓體", "微軟正黑體", "標楷體", "新細明體";
     color: #F5C0E0;
@@ -46,7 +43,7 @@ body {
 /* 影片樣式 */
 #fullscreen-video {
 	position: absolute;
-	top: 0px; /* 你想要影片停留的位置 */
+	top: 20px; /* 你想要影片停留的位置 */
 	left: 0px;
 	width: 100%; /* 影片宽度占满容器 */
 	height: 100%; /* 根据视频比例自适应高度 */
