@@ -21,8 +21,8 @@
 	<div class="container-fluid d-flex justify-content-between"><!-- 使用 d-flex 和 justify-content-between 來使內容左右對齊 -->
 	<div class="d-flex col-sm-10 col-lg-6 col-md-11 col-xl-7 justify-content-between"><!-- 新增的 d-flex 容器，用來包裹品牌和導航按鈕 -->
 		<a class="navbar-brand" href="#" style="color: #FFFFFF;text-shadow: 1px 1px 1px #E0E2EC" >ウェブサイト</a>
-		<button class="navbar-toggler btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon "></span>
+		<button class="navbar-toggler btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"  style="color:#FFFFFF !important; background-color: transparent;">
+			<i class="fa-solid fa-bars" style="color: #ffffff;"></i>
 		</button>
 	</div><!-- 關閉 d-flex 容器 -->
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,7 +50,7 @@
 	<div class="d-flex me-1 col-lg-2.5 col-sm-0.5 ms-sm-0"><!-- 新增的 d-flex 容器，用來包裹搜尋按鈕和表單，並垂直對齊 -->
 	<!-- Search button -->
 		<button class="navbar-toggler btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="fa-solid fa-magnifying-glass"></span>
+			<span class="fa-solid fa-magnifying-glass" style="color:#FFFFFF;"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSearch">
 			<form class="d-flex" role="search">
@@ -93,7 +93,7 @@
             scrollToTopBtn.style.display = 'none';
         }
     });
-
+	
     scrollToTopBtn.addEventListener('click', function() {
         const targetPosition = videoContainer.offsetHeight + videoContainer.offsetTop - navbar.offsetHeight;
         window.scrollTo({
@@ -113,6 +113,32 @@
         return (topVisible || bottomVisible || verticalVisible);
     }
 	});
+
+	window.addEventListener('load', function() {
+    var allElements = document.querySelectorAll('*');
+    allElements.forEach(function(el) {
+        if (el.scrollWidth > window.innerWidth) {
+            console.log(el, '超出了窗口宽度');
+        }
+    });
+	});
+	
+	const animationClass = 'animate__animated animate__bounce';
+    let isAnimating = false;
+
+    function startAnimation() {
+        if (!isAnimating) {
+            scrollToTopBtn.classList.add(animationClass);
+            isAnimating = true;
+            setTimeout(() => {
+                scrollToTopBtn.classList.remove(animationClass);
+                setTimeout(startAnimation, 3000); // 3秒后重新开始动画
+                isAnimating = false;
+            }, 4000); // 动画两次播放后停止（2秒 x 2次）
+        }
+    }
+
+    startAnimation(); // 启动动画循环
 
 	</script>	
 		
