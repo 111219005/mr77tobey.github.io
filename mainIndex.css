@@ -79,7 +79,7 @@ body {
   	animation-iteration-count: 2; /* 播放兩次 */
 }
 .spacer {
-    height: 200px; /* 調整你想要的空白區域高度 */
+    height: 150px; /* 調整你想要的空白區域高度 */
 }
 .content {
     padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
