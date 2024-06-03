@@ -53,7 +53,7 @@ body {
 	width: 100%; /* 影片宽度占满容器 */
 	height: 100%; /* 根据视频比例自适应高度 */
 	object-fit: cover; /* 保持视频内容比例 */
-	z-index: -1;  /*確保影片位於其他内容之下 */
+	z-index: 1;  /*確保影片位於其他内容之下 */
 	pointer-events: none; 
 }
 #scrollToTopBtn {
@@ -61,7 +61,7 @@ body {
     position: absolute;
     bottom: 5px; /* 调整按钮距离影片底部的距离 */
     left: 50%; /* 将按钮水平居中 */
-    transform: calc(50% - 25px); /* 水平居中 */
+    translateX(-50%); /* 水平居中 */
     z-index: 1000; /* 确保按钮位于其他内容之上 */
 	 /* 添加你想要的样式，比如背景颜色、文字颜色等 */
 	background-color: transparent !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
