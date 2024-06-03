@@ -15,6 +15,11 @@ body {
 	width: 100%;
     overflow: scroll;
 }
+.container {
+    height: 100%;
+    overflow-y: auto; /* 允许垂直滚动 */
+    position: relative;
+}
 
   /* navber樣式 */
 .navbar {
@@ -29,7 +34,7 @@ body {
 	padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
     /* 这里的值应该根据导航栏的高度来调整 */
     left: 0;
-    z-index: 1000;
+    z-index: 9999;
 }
 /* 影片容器樣式 */
 .video-container {
@@ -37,12 +42,12 @@ body {
     top: 0px; /* 根據nav的高度進行調整 */
     left: 0;
     width: 100%;
-    height: calc(100% - 10px); /* 100% 減去nav的高度 */
+    height: 100%; /* 100% 減去nav的高度 */
     overflow: hidden;
 }
 /* 影片樣式 */
 #fullscreen-video {
-	position: absolute;
+	position: relative;
 	top: 20px; /* 你想要影片停留的位置 */
 	left: 0px;
 	width: 100%; /* 影片宽度占满容器 */
@@ -57,7 +62,7 @@ body {
     bottom: 5px; /* 调整按钮距离影片底部的距离 */
     left: 50%; /* 将按钮水平居中 */
     transform: calc(50% - 25px); /* 水平居中 */
-    z-index: 9999; /* 确保按钮位于其他内容之上 */
+    z-index: 1000; /* 确保按钮位于其他内容之上 */
 	 /* 添加你想要的样式，比如背景颜色、文字颜色等 */
 	background-color: transparent !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
     border: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
@@ -65,6 +70,13 @@ body {
     box-shadow: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
 	cursor: pointer; /* 设置鼠标指针为手型 */
 	text-decoration: none !important;
+}
+.animate__animated.animate__bounce {
+	animation-duration: 2s; 
+  	animation-iteration-count: 2; /* 播放兩次 */
+}
+.spacer {
+    height: 200px; /* 調整你想要的空白區域高度 */
 }
 .content {
     padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
