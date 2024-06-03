@@ -124,21 +124,16 @@
 	});
 	
 	const animationClass = 'animate__animated animate__bounce';
-    let isAnimating = false;
 
-    function startAnimation() {
-        if (!isAnimating) {
-            scrollToTopBtn.classList.add(animationClass);
-            isAnimating = true;
-            setTimeout(() => {
-                scrollToTopBtn.classList.remove(animationClass);
-                setTimeout(startAnimation, 3000); // 3秒后重新开始动画
-                isAnimating = false;
-            }, 4000); // 动画两次播放后停止（2秒 x 2次）
-        }
-    }
+function startAnimation() {
+    scrollToTopBtn.classList.add(animationClass);
+    setTimeout(() => {
+        scrollToTopBtn.classList.remove(animationClass);
+    }, 2000); // 设置每次动画的时间间隔
+}
 
-    startAnimation(); // 启动动画循环
+setInterval(startAnimation, 4000); // 设置动画循环间隔
+
 
 	</script>	
 		
