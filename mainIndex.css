@@ -14,6 +14,7 @@ body {
     padding: 0; /* 去除默认的页面内边距 */
 	width: 100%;
     overflow: scroll;
+	font-family: "華康中特圓體", "微軟正黑體", "標楷體", "新細明體";
 }
 .container {
     height: 100%;
@@ -88,3 +89,14 @@ body {
 .nav-link {
     color: #FFFFFF;
 }
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /*overflow: hidden;*/
+    margin: 10px auto; /* Add some margin for better spacing */
+    max-width: 200px; /* Optional: control the card width */
+	max-height: 300px;
+	background-color: #FFFFFF;
+}
+
+
