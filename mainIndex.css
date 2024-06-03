@@ -82,6 +82,9 @@ body {
 .spacer {
     height: 150px; /* 調整你想要的空白區域高度 */
 }
+.spacer2 {
+    height: 50px; /* 調整你想要的空白區域高度 */
+}
 
 .content {
     padding-top: 10px; /* 为内容添加与导航栏高度相等的顶部内边距 */
