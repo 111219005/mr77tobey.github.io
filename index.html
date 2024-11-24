@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 	</head>
 	
 	<body>
@@ -258,73 +260,9 @@
     </a>
   </div>
 	
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-	<script>$('.carousel').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  pauseOnHover: true,
-  arrows: true,
-  prevArrow: $('.prev'),
-  nextArrow: $('.next'),
-});
 
-});</script>	
 		
 		
-	<script>
-$(document).ready(function(){
-    var carousel = $("#carouselExampleControls");
-    var isMouseOver = false;
-
-    // 啟用輪播器
-    carousel.carousel({
-        interval: 2000, // 自動播放間隔時間（毫秒）
-        pause: "hover", // 滑鼠懸停時暫停自動播放
-        wrap: false // 禁用循環播放
-    });
-
-    // 滑鼠懸停在輪播器上時
-    carousel.on("mouseenter", function(){
-        isMouseOver = true;
-        // 停止自動播放
-        carousel.carousel("pause");
-    });
-
-    // 滑鼠離開輪播器時
-    carousel.on("mouseleave", function(){
-        isMouseOver = false;
-        // 如果不是點擊事件觸發的，則啟用自動播放
-        if (!isClickEvent) {
-            carousel.carousel("cycle");
-        }
-    });
-
-    // 點擊輪播器區域時
-    var isClickEvent = false;
-    carousel.on("click", function(){
-        isClickEvent = true;
-        // 停止自動播放
-        carousel.carousel("pause");
-        // 恢復狀態以便於滑鼠離開後重新啟用自動播放
-        setTimeout(function(){
-            isClickEvent = false;
-        }, 1000); // 停止自動播放後 1 秒恢復為 false
-    });
-
-    // 滑鼠離開輪播器時重新啟用自動播放
-    carousel.on("slid.bs.carousel", function(){
-        if (!isMouseOver) {
-            carousel.carousel("cycle");
-        }
-    });
-});
-</script>
-		
-	<!--space-->
-	<!--space-->
 	<div class="spacer2">
 	</div>
 	
@@ -348,7 +286,8 @@ $(document).ready(function(){
 	</div>
 		<div class="spacer2" style="background:#180D46; height: 25px ">
 	</div>
-		
+
+  <footer>
 	<div class="spacer d-flex justify-content-between align-items-center" style="background-color:#180D46; height: 100px; color: #FFFFFF; width: 100%;">
     <ul class="fot col-3" style="list-style: none; padding-left: 2;">
       <li><a  style="color: white; text-decoration: none;">2024/06/04</a></li>
@@ -356,123 +295,15 @@ $(document).ready(function(){
     </ul>
     <a class="fott col-6 text-end pe-4" style="color: white; text-decoration: none;">國立台北教育大學 | 數位一甲 111219005 吳函蓁</a>
   </div>
-	
-		<footer>
-    <small>
-      Copyright © 2024 mr77tobey. All Rights Reserved.
-    </small>
+  <small>
+    Copyright © 2024 mr77tobey. All Rights Reserved.
+  </small>
   </footer>
 
+	<script src="videoButton.js"></script>
+  <script src="carousel.js"></script>
+	
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	<!-- vdeio -->
-	<script>	
-	document.addEventListener('DOMContentLoaded', function() {
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    const navbar = document.querySelector('.navbar');
-    const videoContainer = document.querySelector('.video-container');
-
-    // 滚动事件监听器
-    window.addEventListener('scroll', function() {
-        // 当视频部分超过视图的一定比例时，显示按钮
-        if (isVideoPartInViewport(videoContainer, 0.5)) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            // 否则隐藏按钮
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
-
-    scrollToTopBtn.addEventListener('click', function() {
-        const targetPosition = videoContainer.offsetHeight + videoContainer.offsetTop - navbar.offsetHeight;
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
-
-    // 检查元素是否在可视区域内
-    function isVideoPartInViewport(el, ratio) {
-        var rect = el.getBoundingClientRect();
-        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        var topVisible = rect.top >= 0 && rect.top <= windowHeight;
-        var bottomVisible = rect.bottom <= windowHeight && rect.bottom >= 0;
-        var height = rect.height < windowHeight ? rect.height : windowHeight;
-        var verticalVisible = height * ratio <= windowHeight;
-        return (topVisible || bottomVisible || verticalVisible);
-    }
-
-    window.addEventListener('load', function() {
-        var allElements = document.querySelectorAll('*');
-        allElements.forEach(function(el) {
-            if (el.scrollWidth > window.innerWidth) {
-                console.log(el, '超出了窗口宽度');
-            }
-        });
-    });
-});
-
-	</script>	
-		
-	<script>
-        const video = document.getElementById('fullscreen-video');
-
-        video.addEventListener('click', () => {
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { // Firefox
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE/Edge
-                video.msRequestFullscreen();
-            }
-        });
-		document.getElementById('fullscreen-video').muted = true;
-		document.addEventListener("DOMContentLoaded", function() {
-    	var video = document.getElementById('fullscreen-video');
-    	video.onclick = function(event) {
-        event.preventDefault();
-    	};
-		});
-		window.addEventListener('scroll', function() {
-		var video = document.getElementById('fullscreen-video');
-		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		var newTop = scrollTop; // 50 是你希望影片停留的位置
-		video.style.top = newTop + 'px';
-		});
-	  // 使用 JavaScript 监听页面滚动事件
-		window.addEventListener('scroll', function() {
-		var navbar = document.querySelector('.navbar');
-		var content = document.querySelector('.content');
-		var scrollPosition = window.scrollY;
-
-		if (scrollPosition > navbar.offsetHeight && navbar.style.position !== 'fixed') {
-        // 如果滚动位置超过了导航栏的高度且导航栏当前不是固定定位，则切换为固定定位
-        navbar.style.position = 'fixed';
-        content.style.paddingTop = navbar.offsetHeight + 'px'; // 调整内容的顶部内边距
-    	} else if (scrollPosition <= navbar.offsetHeight && navbar.style.position !== 'relative') {
-        // 否则，如果滚动位置不超过导航栏的高度且导航栏当前不是相对定位，则切换为相对定位
-        /*navbar.style.position = 'relative';
-        content.style.paddingTop = '0'; // 重置内容的顶部内边距
-    	}*/
-		});
-    </script>
-
-	</body>	
+</body>	
 
 </html>
