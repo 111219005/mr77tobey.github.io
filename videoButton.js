@@ -84,20 +84,6 @@
 		var content = document.querySelector('.content');
 		var scrollPosition = window.scrollY;
 
-		if (scrollPosition > navbar.offsetHeight && navbar.style.position !== 'fixed') {
-        // 如果滚动位置超过了导航栏的高度且导航栏当前不是固定定位，则切换为固定定位
-        navbar.style.position = 'fixed';
-        content.style.paddingTop = navbar.offsetHeight + 'px'; // 调整内容的顶部内边距
-    	} 
-		else if (scrollPosition <= navbar.offsetHeight && navbar.style.position !== 'relative') {
-    	navbar.style.position = 'relative';
-    	content.style.paddingTop = '0';
-		}
-			
-		/*else if (scrollPosition <= navbar.offsetHeight && navbar.style.position !== 'relative');*/
-        // 否则，如果滚动位置不超过导航栏的高度且导航栏当前不是相对定位，则切换为相对定位
-        /*navbar.style.position = 'relative';
-        content.style.paddingTop = '0'; // 重置内容的顶部内边距
-    	}*/
+	
 		});
  
