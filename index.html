@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>112-2網站設計與賞析作業</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="Scripts/swfobject_modified.js"></script>
+		<link href="mainIndex.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/3e63dd965f.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+	</head>
+	
+	<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg">
+	<div class="container-fluid d-flex justify-content-between"><!-- 使用 d-flex 和 justify-content-between 來使內容左右對齊 -->
+	<div class="d-flex col-sm-10 col-lg-6 col-md-11 col-xl-7 justify-content-between"><!-- 新增的 d-flex 容器，用來包裹品牌和導航按鈕 -->
+		<a class="navbar-brand" href="#" style="color: #FFFFFF;text-shadow: 1px 1px 1px #E0E2EC" ><i class="fa-solid fa-droplet" style="color: #f1f2f3;">&nbsp;</i>ウェブサイト</a>
+		<button class="navbar-toggler btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"  style="color:#FFFFFF !important; background-color: transparent;">
+			<i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+		</button>
+	</div><!-- 關閉 d-flex 容器 -->
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+			
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Works</a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="0305/index.html">0305</a></li>
+					<li><a class="dropdown-item" href="0312/w0312.html">0312</a></li>
+					<li><a class="dropdown-item" href="0319/index.html">0319</a></li>
+					<li><a class="dropdown-item" href="0326/index.html">0326</a></li>
+					<li><a class="dropdown-item" href="https://sites.google.com/stu.ntue.edu.tw/sdgs5?usp=sharing">0402</a></li>
+					<li><a class="dropdown-item" href="0416/index.html">0416</a></li>
+					<li><a class="dropdown-item" href="0416/index - 複製">0416-copy</a></li>
+					<li><a class="dropdown-item" href="0423/index.html">0423</a></li>
+					<li><a class="dropdown-item" href="0423/bonus.html">0423-bonus</a></li>
+					<li><a class="dropdown-item" href="0430/index.html">0430</a></li>
+					<li><a class="dropdown-item" href="0430/bonus.html">0430-bonus</a></li>
+					<li><a class="dropdown-item" href="0507/index.html">0507</a></li>
+					<li><a class="dropdown-item" href="0514/index.html">0514</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="d-flex me-1 col-lg-2.5 col-sm-0.5 ms-sm-0"><!-- 新增的 d-flex 容器，用來包裹搜尋按鈕和表單，並垂直對齊 -->
+	<!-- Search button -->
+		<button class="navbar-toggler btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa-solid fa-magnifying-glass" style="color:#FFFFFF;"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSearch">
+			<form class="d-flex" role="search">
+				<input class="form-control me-2 ms-2 " type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-light" type="submit" style="color:#FFFFFF;">Search</button>
+			</form>
+		</div>
+	</div><!-- 關閉 d-flex 容器 -->
+	</div>
+	</nav>
+		
+	<!-- video -->
+	<div class="video-container">
+	<video id="fullscreen-video" autoplay loop muted>
+    <source src="video.mp4" type="video/mp4">
+    您的瀏覽器不支持 HTML5 影片。
+	</video>
+	
+	<button id="scrollToTopBtn" class="btn btn-lg animate__animated animate__bounce" type="button" aria-label="Scroll to Top" href="#">
+	<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16" style="color: #180D46;">
+  	<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+	</svg>
+	<!-- <a class="fa-solid fa-circle-arrow-down" style="color: #B197FC;"></a>-->	
+	</button>
+	</div>
+		
+	
+	<!--space-->
+	<div class="spacer">
+    <img src="work.png" width="320" height="143" alt=""/>
+	</div>
+	
+	<!-- 輪播卡片-->
+	 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner d-flex flex-row">
+      <!-- 第1頁 -->
+      <div class="carousel-item active">
+		<div class="row">
+          <div class="col">
+			  <a  href="0305/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather1.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0305</h5>
+            <p class="card-text">我的名片</p>
+          </div>
+				  </div></a>
+			  </div>
+			<div class="col">
+				<a  href="0312/w0312.html" >
+        <div class="card">
+          <img src="weatherPic/weather2.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0312</h5>
+            <p class="card-text">我的網站</p>
+          </div>
+					</div></a>
+			</div>
+			<div class="col">
+				<a  href="0319/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather3.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0319</h5>
+            <p class="card-text">CSS</p>
+          </div>
+					</div></a>
+			</div>
+      </div>
+		  </div>
+      <!-- 第2頁 -->
+      <div class="carousel-item">
+		  <div class="row">
+			  <div class="col">
+				  <a  href="0326/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather4.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0326</h5>
+            <p class="card-text">CSS2</p>
+          </div>
+					  </div></a>
+			  </div>
+			  <div class="col">
+				  <a href="https://sites.google.com/stu.ntue.edu.tw/sdgs5?usp=sharing" >
+        <div class="card">
+          <img src="weatherPic/weather5.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0402</h5>
+            <p class="card-text">Google Site</p>
+          </div>
+					  </div></a>
+			  </div>
+			  <div class="col">
+				  <a  href="0416/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather6.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0416</h5>
+            <p class="card-text">Bootstrap</p>
+          </div>
+					  </div></a>
+			  </div>
+      </div>
+		  </div>
+		<!-- 第3頁 -->
+      <div class="carousel-item">
+		  <div class="row">
+			  <div class="col">
+				  <a  href="0416/index - 複製.html" >
+        <div class="card">
+          <img src="weatherPic/weather7.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0416</h5>
+            <p class="card-text">Bootstrap<br>(利用DW內建)</p>
+          </div>
+					  </div></a>
+			  </div>
+			  <div class="col">
+				  <a  href="0423/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather8.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0423</h5>
+            <p class="card-text">Bootstrap內容樣式</p>
+          </div>
+					  </div></a>
+			  </div>
+			  <div class="col">
+				  <a  href="0423/bonus.html" >
+        <div class="card">
+          <img src="weatherPic/weather9.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0423</h5>
+            <p class="card-text">Bonus</p>
+          </div>
+					  </div></a>
+      </div>
+		  </div>
+		</div>
+	<!-- 第4頁 -->
+      <div class="carousel-item">
+		  <div class="row">
+			  <div class="col">
+				  <a  href="0430/bonus.html" >
+        <div class="card">
+          <img src="weatherPic/weather10.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0430</h5>
+            <p class="card-text">Bootstrap<br>公用類別及表單</p>
+          </div>
+					  </div></a>
+			  </div>
+			  <div class="col">
+				  <a  href="0430/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather11.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0430</h5>
+            <p class="card-text">Bonus</p>
+          </div>
+					  </div></a>
+			  </div>
+			  <div class="col">
+				  <a  href="0507/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather12.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0507</h5>
+            <p class="card-text">Bootstrap 元件(一)</p>
+          </div>
+					  </div></a>
+      </div>
+		  </div>
+		</div>
+		<!-- 第5頁 -->
+      <div class="carousel-item">
+		  <div class="row">
+			  <div class="col">
+		<a  href="0514/index.html" >
+        <div class="card">
+          <img src="weatherPic/weather13.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">0514</h5>
+            <p class="card-text">Bootstrap 元件(二)</p>
+          </div>
+        </div></a>
+			  </div>
+			  
+		  </div>
+		</div>
+		</div>
+		 
+		 
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+	
+
+		
+		
+	<div class="spacer2">
+	</div>
+	
+	<div class="container2">
+    <div class="row">
+      <div class="song col-5">
+        <img src="song.png" width="214" height="63" alt=""/>
+		 <div class="spacer3"></div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SQVaj6OceUY?si=epeU96ENWENqhlFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-lg-1"></div> <!-- 這是一個空的列，用來添加間隔 -->
+      <div class="school col-5">
+        <img src="school.png" width="276" height="63" alt=""/>
+		   <div class="spacer3"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.278259251106!2d121.5420624760505!3d25.024629238667554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1708998324500!5m2!1szh-TW!2stw" width="550" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+	
+		<div class="spacer2">
+	</div>
+		<div class="spacer2" style="background:#180D46; height: 25px ">
+	</div>
+
+  <footer>
+	<div class="spacer d-flex justify-content-between align-items-center" style="background-color:#180D46; height: 100px; color: #FFFFFF; width: 100%;">
+    <ul class="fot col-3" style="list-style: none; padding-left: 2;">
+      <li><a  style="color: white; text-decoration: none;">2024/06/04</a></li>
+      <li><a  style="color: white; text-decoration: none;">網站設計與賞析期末作業</a></li>
+    </ul>
+    <a class="fott col-6 text-end pe-4" style="color: white; text-decoration: none;">國立台北教育大學 | 數位一甲 111219005 吳函蓁</a>
+  </div>
+  <small>
+    Copyright © 2024 mr77tobey. All Rights Reserved.
+  </small>
+  </footer>
+
+	<script src="videoButton.js"></script>
+  <script src="carousel.js"></script>
+	
+		
+</body>	
+
+</html>
