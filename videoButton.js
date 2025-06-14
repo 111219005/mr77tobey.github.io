@@ -1,6 +1,7 @@
 $('#scrollToTopBtn').on('click', function() {
-    window.scrollBy({
-        top: window.innerHeight,
+    const target = window.innerHeight - 25;
+    window.scrollTo({
+        top: target,
         left: 0,
         behavior: 'smooth'
     });
