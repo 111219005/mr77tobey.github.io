@@ -1,21 +1,28 @@
 @charset "utf-8";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+* {
+    box-sizing: border-box;
+}
 html {
     /*overflow: hidden;*/
     height: 100%;
+}
+html, body {
+    margin: 0;
+    padding: 0 !important;
+    overflow-x: hidden !important;
 }
 
 body {
 	position: relative;
     background-color: #E0E2EC;
-	overflow-y: auto;  /*允许垂直滚动 */
-    height: 100%;  /*让 body 占满整个视窗 */
-    margin: 0; /* 去除默认的页面边距 */
-    padding: 0; /* 去除默认的页面内边距 */
+	overflow-y: auto; 
+    margin: 0;
+    padding: 0;
 	width: 100%;
-    overflow: scroll;
 	font-family: "華康中特圓體", "微軟正黑體", "標楷體", "新細明體";
 }
+
 .container {
     height: 100%;
     overflow-y: auto; /* 允许垂直滚动 */
@@ -41,12 +48,29 @@ body {
     color: #FFFFFF !important; /* 设置图标颜色为白色 */
 }
 /* 影片容器樣式 */
+/* 讓 video-container 佔滿整個視窗高度且不會因滾動出現空白 */
 .video-container {
     position: relative;
-    top: 0px; /* 根據nav的高度進行調整 */
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* 100% 減去nav的高度 */
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+/* 讓影片鋪滿容器且不會造成橫向滾動 */
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    /* transform: translate(-50%, -50%); */
+    object-fit: cover;
     overflow: hidden;
 }
 /* 影片樣式 */
@@ -61,23 +85,24 @@ body {
 	pointer-events: none; 
 }
 #scrollToTopBtn {
-	font-size: 24px; /* 设置按钮的字体大小 */
+    font-size: 24px;
     position: absolute;
-    bottom: 5px; /* 调整按钮距离影片底部的距离 */
-    left: 50%; /* 将按钮水平居中 */
-    transform: calc(50% - 25px); /* 水平居中 */
-    z-index: 1000; /* 确保按钮位于其他内容之上 */
-	 /* 添加你想要的样式，比如背景颜色、文字颜色等 */
-	background-color: transparent !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
-    border: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
-    outline: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
-    box-shadow: none !important; /* 使用 !important 覆盖 Bootstrap 的样式 */
-	cursor: pointer; /* 设置鼠标指针为手型 */
-	text-decoration: none !important;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    text-decoration: none !important;
+    pointer-events: auto !important;
+    color: #fff;
 }
 .animate__animated.animate__bounce {
 	animation-duration: 2s; 
-  	animation-iteration-count: 2; /* 播放兩次 */
+  	animation-iteration-count: infinite; /* 播放兩次 */
 }
 .spacer {
     height: 150px; /* 調整你想要的空白區域高度 */
@@ -94,6 +119,22 @@ body {
   }
 .nav-link {
     color: #FFFFFF;
+}
+.nav-link:hover {
+    color: #E0E2EC;
+}
+.nav-link:active,
+.nav-link:focus,
+.nav-link.active {
+    color: #E0E2EC !important;  /* 你想要的顏色 */
+    outline: none;
+}
+.btn-search{
+    color: white;
+}
+.btn-search:hover{
+    color: #180D46;
+    background-color: #FFFFFF;
 }
 .card {
     border: 1px solid #ddd;
